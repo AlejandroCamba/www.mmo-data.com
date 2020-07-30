@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/bootstrap_customizations.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+html, body {
+  font-family: Helvetica;
+  font-style: normal;
+}

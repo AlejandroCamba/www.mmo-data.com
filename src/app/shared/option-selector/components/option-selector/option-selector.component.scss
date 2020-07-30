@@ -1,0 +1,109 @@
+@import "responsive.mixin.scss";
+
+$width: 30px;
+$height: 10.8px;
+
+// remove bootstrap defaults for this component only, 
+// for the general page layout i'd rather stick to bootstrap's defaults 
+* {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.select {
+  position: relative;
+  width: $width;
+  height: $height;
+  font-weight: 300;
+  color: grey;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 1;
+  margin-left: 10%;
+  margin-top: 7px;
+}
+
+.label-container {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  border: 2px solid #dadee4;
+  text-align: center;
+  padding: 3px 40px 3px 40px;
+  border-radius: 20px;
+  background-color: white;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -45%;
+    left: -8%;
+    width: 28%;
+    z-index: -2;
+    height: 168%;
+    border-radius: 50%;
+    border: 2px solid #dadee4;
+  }
+}
+
+.main-circle {
+  z-index: 3;
+  position: absolute;
+  width: 20%;
+  height: 55.56%;
+  border-radius: 50%;
+  background-color: rgba(89, 206, 230, 0.52);
+  top: 55%;
+  left: 20%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2.7px solid #0b829b;
+    left: -30%;
+    top: -30%;
+    box-shadow: 2px 2px 10px 0px rgba(89, 206, 230, 0.52);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 2px solid #59cee6;
+  }
+}
+
+@include screen('tablet-landscape') {
+
+  .label-container {  
+    padding: 3px 30px 3px 30px;
+
+    &:before {
+      border: 2px solid white;
+    }
+  }
+
+}
+
+@include screen('phone') {
+
+  .label-container {  
+    padding: 3px 30px 3px 30px;
+
+    &:before {
+      border: 2px solid white;
+    }
+  }
+}
