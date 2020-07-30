@@ -1,0 +1,31 @@
+@import "responsive.mixin.scss";
+
+.main-header-content {
+  margin-top: 25px;
+  padding: 0px 20px 0px 50px;
+}
+
+.version-label {
+  float: right;
+  font-size: 12px;
+  color: #0B829B;
+  
+}
+
+.title {
+  font-size: 24px;
+}
+
+@include screen('phone') {
+  .main-header-content {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .version-label {
+    margin-right: 5px;
+  }
+
+  .main-header-content {
+    margin-top: 35px;
+  }
+}
