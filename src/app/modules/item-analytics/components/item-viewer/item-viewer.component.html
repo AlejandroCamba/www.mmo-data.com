@@ -1,0 +1,26 @@
+<div>
+  <hr class="division"/>
+  <div class="title-row" (click)="toggleCaret()">
+    <h2 class="title">{{ item.name }}</h2>
+    <div class="level-circle"></div>
+    <div class="price-container">
+      <p class="price-tag">
+        {{ item.averagePrice
+        }}<span class="fa" [ngClass]="{'fa-caret-right': !caretState, 'fa-caret-down': caretState}"></span>
+      </p>
+    </div>
+  </div>
+  <div class="additional-content" [@toggleClick]="caretState">
+  </div>
+  <div class="graph-container">
+    <div class="graph">
+      <app-linear-chart></app-linear-chart>
+    </div>
+    <div class="tabs">
+      <p (click)="setActive('daily')" class="tab-option" [class.active]="active === 'daily'">daily</p>
+      <p (click)="setActive('monthly')" class="tab-option" [class.active]="active === 'monthly'">monthly</p>
+      <p (click)="setActive('weekly')" class="tab-option" [class.active]="active === 'weekly'">weekly</p>
+      <p (click)="setActive('yearly')" class="tab-option" [class.active]="active === 'yearly'">yearly</p>
+    </div>
+  </div>
+</div>

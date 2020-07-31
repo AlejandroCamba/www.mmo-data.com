@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./option-selector.component.scss']
 })
 export class OptionSelectorComponent implements OnInit {
-  @Input() options: string[];
-  selected = 'PS4';
+  @Input() name: string[];
+
   constructor() { }
 
   ngOnInit(): void {

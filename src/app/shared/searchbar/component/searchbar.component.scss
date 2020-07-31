@@ -1,0 +1,42 @@
+
+@import "responsive.mixin.scss";
+@import "global_design_varibles.scss";
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+  outline: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  margin-right: 50px;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.175rem;
+  line-height: 1.95rem;
+  text-align: center;
+  pointer-events: none;
+  color: $darker-auxiliar;
+}
+
+.form-control {
+  font-size: 12px;
+}
+
+@include screen('tablet-landscape') {
+
+}
+
+@include screen('phone') {
+  .form-group {
+    width: 150px;
+  }
+
+  .form-control {
+    font-size: 10px;
+  }
+}
